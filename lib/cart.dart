@@ -36,7 +36,7 @@ class _cartState extends State<cart> {
       if(quantity < 2){
         quantity++;
       }if(quantity <= 2){
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Cant Increse more")));
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Cant Increse more")));
       }
     });
   }
@@ -69,7 +69,7 @@ class _cartState extends State<cart> {
                                 .removeformcart(id: Id)
                                 .whenComplete(() =>
                                     ScaffoldMessenger.of(context)
-                                        .showSnackBar(SnackBar(
+                                        .showSnackBar(const SnackBar(
                                       content: Text("Removed From Cart"),
                                       duration: Duration(milliseconds: 700),
                                     )))

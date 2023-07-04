@@ -55,13 +55,13 @@ class _signupState extends State<signup> {
                   Padding(
                     padding: const EdgeInsets.all(30.0),
                     child: GradientText("Welcome to Gadgetronics Signup",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                         gradientType: GradientType.radial,
                         radius: 5,
-                        colors: [
+                        colors: const [
                           Colors.purple,
                           Colors.orange,
                           Colors.green,
@@ -86,7 +86,7 @@ class _signupState extends State<signup> {
                           return "provide Proper User-Name";
                         }
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.people),
                         hintText: "Enter Name",
                         labelText: "Name",
@@ -133,7 +133,8 @@ class _signupState extends State<signup> {
                           return "Enter Mobile number";
                         } else if (k2.length > 10 || k2.length < 10) {
                           return "enter valid number";
-                        }else if (!RegExp(r"^[6789]\d{9}$").hasMatch(k2)) {
+                        }else if (!RegExp(r'(^(?:[+0]9)?[0-9]{10,}$)')
+                            .hasMatch(k2)) {
                           return 'Please enter a valid Indian mobile number';
                         }
                       },

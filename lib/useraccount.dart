@@ -29,7 +29,7 @@ class _useraccountState extends State<useraccount> {
     await user.signOut();
     Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => Loginpage(title: "User Login")),
+        MaterialPageRoute(builder: (context) => const Loginpage(title: "User Login")),
         (route) => false);
   }
 
@@ -139,7 +139,7 @@ class _useraccountState extends State<useraccount> {
                           );
                         });
                   } else {
-                    return Center(
+                    return const Center(
                       child: Column(
                         children: [
                           CircularProgressIndicator(),

@@ -109,7 +109,7 @@ class _bottomnavibarState extends State<bottomnavibar> {
               // backgroundColor: Colors.red,
               label: 'cart',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               backgroundColor: Colors.blue,
 
               icon: Icon(Icons.favorite),
